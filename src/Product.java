@@ -1,35 +1,37 @@
 public class Product {
-    //先声明实例变量
+    //声明实例变量
     private String code;
     private String description;
-    private Double price;
+    private double price;
 
-    //再写构造函数
+    //Constructor Method 构造函数
     Product(String initCode, String initDescription, double initPrice) {
         code = initCode;
         description = initDescription;
         price = initPrice;
     }
 
+    //Accessor Method  访问方法
     public String getCode() {
-        return code;
+        return this.code;
     }
-
     public String getDescription() {
-        return description;
+        return this.description;
     }
-
     public Double getPrice() {
-        return price;
+        return this.price;
     }
-}
 
+    @Override
+    //此处重写的equals()、toString()方法需要再考虑什么因素？
+    //尝试使用code作为区分
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 
-/*
-    public Boolean equals(Object object) //格式可能不规范
     @Override
     public String toString() {
         return super.toString();
     }
 }
-*/
+
