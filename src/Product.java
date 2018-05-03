@@ -18,20 +18,22 @@ public class Product {
     public String getDescription() {
         return this.description;
     }
-    public Double getPrice() {
+    public double getPrice() {
         return this.price;
     }
 
-    @Override
     //此处重写的equals()、toString()方法需要再考虑什么因素？
     //尝试使用code作为区分
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
 
-    @Override
     public String toString() {
         return super.toString();
+    }
+
+    public static void main(String[] args){
+        System.out.println("TEST");
     }
 }
 
