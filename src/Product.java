@@ -26,11 +26,20 @@ public class Product {
 
     //If two objects have the same variable code,but each of them is not the instance of Product class,or worse,their class are not the same,how to avoid the "True" output?
     public boolean equals(Object obj) {
-        if(obj instanceof Product) {
+        if (obj.getClass().getName()== this.getClass().getName()){
+            //Object类没有getCode(),除了强制转换还有什么可以获取code属性
             Product TransObj =(Product) obj;
             return TransObj.getCode() == this.getCode();
         }else{
             return false;
+
+        /* //不适用于有子类后的情况
+        if(obj instanceof Product) {
+            Product TransObj =(Product) obj;
+            return TransObj.getCode() == this.getCode();
+        }else{
+            return false；
+            */
         }
     }
 
@@ -41,10 +50,14 @@ public class Product {
     public static void main(String[] args){
         Product TestProduct;
         Product CompareProduct;
+        Coffee TestCoffee;
+        CoffeeBrewer TestCoffeeBrewer;
         TestProduct = new Product ("001","Balahbalah",100);
         CompareProduct = new Product("002","HAHA",10);
-        //System.out.print(TestProduct.toString());
-        System.out.print(CompareProduct.getClass().getName());
+        TestCoffee = new Coffee("001","aaa",1.1,"b","c","d","e","f","g");
+        TestCoffeeBrewer = new CoffeeBrewer("001","aaa",1.1,"b","c",1);
+        System.out.println(TestCoffeeBrewer.equals(TestCoffee));
+        System.out.print(TestProduct);
     }
 }
 
