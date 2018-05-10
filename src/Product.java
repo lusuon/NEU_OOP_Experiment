@@ -1,4 +1,4 @@
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.CompareGenerator;
+
 
 public class Product {
     //声明实例变量
@@ -46,7 +46,7 @@ public class Product {
     public String toString() {
         return this.getCode()+"_"+this.getDescription()+"_"+this.getPrice();
     }
-
+    /*
     public static void main(String[] args){
         Product TestProduct;
         Product CompareProduct;
@@ -59,5 +59,6 @@ public class Product {
         System.out.println(TestCoffeeBrewer.equals(TestCoffee));
         System.out.print(TestProduct);
     }
+    */
 }
 

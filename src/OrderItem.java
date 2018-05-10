@@ -33,6 +33,7 @@ public class OrderItem {
         return this.getQuantity() + " " + this.getProduct().getCode() + " " + this.getProduct().getPrice();
     }
 
+    /*
     public static void main(String[] args){
         OrderItem TestItem;
         Product TestProduct;
@@ -43,5 +44,7 @@ public class OrderItem {
         TestItem.setQuantity(1);
         System.out.println(TestItem.getValue());
         System.out.print((TestItem.toString()));
+
     }
+    */
 }

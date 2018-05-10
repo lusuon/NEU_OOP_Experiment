@@ -38,7 +38,7 @@ public class Coffee extends Product{
     public String toString() {
         return this.getCode()+"_"+this.getDescription()+"_"+this.getPrice()+"_"+this.getOrigin()+"_"+this.getRoast()+"_"+this.getFlavor()+"_"+this.getAroma()+"_"+this.getAcidity()+"_"+this.getBody();
     }
-
+    /*
     public static  void main (String args[]){
         Coffee TestCoffee;
         Product CompareCoffee;
@@ -48,4 +48,5 @@ public class Coffee extends Product{
         //System.out.println(TestCoffee.equals(CompareCoffee));
         System.out.println(TestCoffee instanceof Product);// True
     }
+    */
 }

@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 
 public class Catalog {
-    Collection<Product> products
+    private  Collection<Product> products;
     //public Catalog() — Creates the collection products, which is initially empty.
     public Catalog(){
         products = new ArrayList<Product>();
@@ -24,19 +24,27 @@ public class Catalog {
     }
 
     //public Product getProduct(String code) — Returns a reference to the Product instance with the specified code. Returns null if there are no products in the catalog with the specified code.
-    public Product getProduct(String code){
-        Iterator<Product> iter = products.iterator();
-        while (iter.hasNext()){
-            if (iter.next().getCode()==code){
-                return iter.next();
-                break;
-            }else if(iter.hasNext()==false)
+    public Product getProduct(String code) {
+        Product FindProduct;
+        FindProduct = null;
+        //迭代器与for-each循环实现方式相同
+        //Iterator<Product> iter = products.iterator();
 
+        for (Product product : products) {
+            if (product.getCode() == code) {
+                FindProduct = product;
+            }
         }
+        return FindProduct;
+    }
+    //public int getNumberOfProducts() — Returns the number of instances in the collection products.public int getNumberOfProducts()public int getNumberOfProducts()public int getNumberOfProducts()
+   public int getNumberOfProducts(){
+            return products.size();
     }
 
-    //public int getNumberOfProducts() — Returns the number of instances in the collection products.
-    public int getNumberofProduct(){
-
+    /*
+    public static void main (String args[]){
+        String t="test";
     }
+    */
 }
